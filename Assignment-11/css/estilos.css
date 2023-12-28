@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Lobster";
+    src: url(../Font/Lobster-Regular.ttf);
+}
+
+body{
+    background-color: #4C7B9D;
+    background-image: url(../img/ciudad.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    margin: 0px;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+h1{
+    text-align: center;
+    background-color: #DF3448;
+    color: white;
+    margin: 0;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+h2{
+    color: #DF3448;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-shadow: 0px 2px 4px rgb(88, 88, 88);
+}
+
+h1, h2{
+    font-family: "Lobster", cursive ;
+}
+
+h2, p{
+    background-color: #ACDADB;
+    margin: 0 8%;
+    padding: 20px;
+    border-left: 4px inset rgba(0, 0, 0, 0.35);
+}
+
+h2:first-of-type{
+    text-align: center;
+    margin-top: calc(10% + 64px);
+    border-radius: 16px 16px 0 0;
+    border-top: 4px inset rgba(0, 0, 0, 0.35);
+}
+
+h2+p{
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+p{
+    display: block;
+    color:#213557;
+    text-align: left;
+}
+
+p:last-of-type{
+    border-radius: 0px 0px 16px 16px;
+    margin-bottom: 30%;
+    padding-bottom: 110px;
+}
+
+p:last-of-type::after{
+    content: url(../img/gato.png);
+    transform: scale(0.5);
+    position: absolute;
+    left: calc(50% - 132px);
+    bottom: -300px;
+}
+
+p:not(h2+p)::first-letter{
+    font-size: 2rem;
+    font-family: "Lobster", cursive;
+}

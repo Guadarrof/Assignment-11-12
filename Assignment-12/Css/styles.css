@@ -1,0 +1,214 @@
+@font-face {
+    font-family: LemonMilk;
+    font-weight: 400;
+    src: url(../Fonts/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    font-weight: 600;
+    src: url(../Fonts/LEMONMILK-Medium.otf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    font-weight: bold;
+    src: url(../Fonts/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../Fonts/BebasNeue-Regular.ttf);
+}
+
+body{
+    margin: 0px;
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
+}
+.banner{
+    background-image: url(../Img/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: LemonMilk, monospace;
+    font-weight: 400;
+    height: 400px;
+    color: #fffbef;
+    text-shadow: -2px 2px 2px #004165;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 52px;
+}
+
+
+
+.nav-bar{
+    background-color: #fff;
+    color: #004165;
+    display: flex;
+    padding-right: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    height: 52px;
+    box-shadow: 0px 4px 8px 0px #00426592;
+}
+
+.nav-pages{
+    display: flex;
+    flex-direction:row;
+    align-items: end;
+    margin: 15px 30px;
+}
+.nav-pages a{
+    margin: 0 0.75rem;
+    text-decoration: none;
+    color: #004165;
+}
+
+.nav-pages a:visited{
+    margin: 0 0.75rem;
+    text-decoration: none;
+    color: #00535e;
+}
+
+.nav-pages a:hover{
+    margin: 0 0.75rem;
+    text-decoration: none;
+    color: #fbc834;
+    font-size: 1.25rem;
+}
+
+
+.nav-bar #tematica{
+    margin-left: 1rem;
+    color: #fbc834;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    align-items: center;
+}
+
+.card-frame{
+    box-shadow: -5px 6px 4px 0px #00426592;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.card-img{
+    margin-right: 2rem;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.img-1{
+    background-image: url(../Img/Fiji.jpg);
+}
+
+.img-2{
+    background-image: url(../Img/Japan.jpg);
+}
+
+.img-3{
+    background-image: url(../Img/Fiji2.jpg);
+}
+
+.card p{
+    color:#fbc834;
+}
+
+.footer{
+    background-color: #004165;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer a:hover{
+    cursor: url(../Img/Vector.svg), auto;
+}
+
+a:visited{
+    color: #fbc834;
+    text-decoration:none;
+}
+
+.color-container{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+}
+.circle-container{
+    height: 8rem;
+    width: 8rem;
+    margin-top: 4px;
+}
+
+.circle{
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-circle{
+    height: 8rem;
+    width: 8rem;
+}
+
+.indigo-circle{
+    height: 6rem;
+    width: 6rem;
+}
+.yellow-circle{
+    height: 4rem;
+    width: 4rem;
+}
+.cream-circle{
+    height: 2rem;
+    width: 2rem;
+}
+
+select, .color-container button{
+    height: 20px;
+}
+
+select{
+    border: 4px solid #004165;
+    color: #004165;
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0.25rem;
+    height: 40px;
+}
