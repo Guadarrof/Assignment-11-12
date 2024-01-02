@@ -15,8 +15,6 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-
 h1{
     text-align: center;
     background-color: #DF3448;
@@ -26,6 +24,8 @@ h1{
     position: fixed;
     top: 0px;
     width: 100%;
+    text-shadow: 3px 3px 6px black;
+    z-index: 1;
 }
 
 h2{
@@ -44,19 +44,28 @@ h2, p{
     background-color: #ACDADB;
     margin: 0 8%;
     padding: 20px;
-    border-left: 4px inset rgba(0, 0, 0, 0.35);
+    box-shadow: inset 9px 0 5px -5px #68878c;
+    line-height: 1.1;
+
+
 }
 
 h2:first-of-type{
     text-align: center;
     margin-top: calc(10% + 64px);
     border-radius: 16px 16px 0 0;
-    border-top: 4px inset rgba(0, 0, 0, 0.35);
+    /* border-top: 4px inset rgba(0, 0, 0, 0.35); */
+    box-shadow: inset 9px 9px 5px -5px #68878c;
 }
 
 h2+p{
     text-align: center;
+    font-style: italic;
     font-size: 1.15rem;
+}
+
+h2 + p:before, h2 + p:after {
+    content: "-";
 }
 
 p{

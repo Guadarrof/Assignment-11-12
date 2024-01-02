@@ -22,29 +22,31 @@
         <h1>Te invitamos a conocer el mundo</h1>
     </div>
     <div class="color-container">
-        <select name="colores" id="colores">
-            <option value="">Selecciona un color</option>
-            <option value="blue">Azul Marino</option>
-            <option value="indigo">Indigo</option>
-            <option value="yellow">Amarillo</option>
-            <option value="cream">Crema</option>
-        </select>
-        <div class="checkbox">
-            <input type="checkbox" name="superpuesto" id="superpuesto">
-            <label for="superpuesto">Modo Superpuesto</label>
+        <div class="groupSelect">
+            <div id="idSelector" class="color-selector">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="superpuesto" id="idChkSuperpuesto">
+                <label for="superpuesto">Modo Superpuesto</label>
+            </div>
+            <button>Reset</button>
         </div>
-        <div class="circle-container">
-            <div class="circle blue-circle">
-                <div class="circle indigo-circle">
-                    <div class="circle yellow-circle">
-                        <div class="circle cream-circle">
-                        </div>
-                    </div>
-                </div>
+        <div class="circles">
+            <div class="circle" id="idFirst">
+
+            </div>
+            <div class="circle" id="idSecond">
+
+            </div>
+            <div class="circle" id="idThird">
+
+            </div>
+            <div class="circle" id="idFourth">
             </div>
         </div>
-        <button>Reset</button>
     </div>
+
+
     <div class="card-container">
         <div class="card-frame">
             <div class="card">
@@ -66,7 +68,7 @@
         </div>
     </div>
     <div class="footer">
-        <a href="https://www.australia.com/en">Inspiracion</a>
+        <a href="https://www.australia.com/en" target="_blank">Inspiracion</a>
     </div>
     <script src="../JS/index.js"></script>
 </body>

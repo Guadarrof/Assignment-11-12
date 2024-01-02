@@ -168,36 +168,40 @@ a:visited{
     align-items: center;
     justify-content: space-around;
 }
-.circle-container{
-    height: 8rem;
-    width: 8rem;
-    margin-top: 4px;
-}
+
 
 .circle{
     border: 2px solid black;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
-.blue-circle{
+#idFirst{
     height: 8rem;
     width: 8rem;
+    z-index: 1;
 }
 
-.indigo-circle{
+#idSecond{
     height: 6rem;
     width: 6rem;
+    z-index: 2;
 }
-.yellow-circle{
+
+#idThird{
     height: 4rem;
     width: 4rem;
+    z-index: 3;
 }
-.cream-circle{
+
+#idFourth{
     height: 2rem;
     width: 2rem;
+    z-index: 4;
 }
 
 select, .color-container button{
@@ -211,4 +215,45 @@ select{
     font-size: 16px;
     padding: 0.25rem;
     height: 40px;
+}
+
+.circles{
+    display: flex;
+    position: relative;
+    height: 8rem;
+    width: 8rem;
+    margin: 1rem 0;
+    
+}
+
+.groupSelect{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox{
+    margin: 1rem 0;
+}
+
+.groupSelect button{
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background-color: #fbc834;
+    color: #00535e;
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    padding: 1rem 0;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.groupSelect button:active{
+    background-color: white;
+    border: 3px solid #fbc834;
+    border-style: inset;
+    color: #fbc834;
 }
