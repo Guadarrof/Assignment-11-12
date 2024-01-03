@@ -3,7 +3,7 @@ let selectValue=document.getElementsByTagName("option");
 let chkSuperpuesto=document.getElementById("idChkSuperpuesto");
 let circles=document.getElementsByClassName("circle");
 let idSelector=document.getElementById('idSelector');
-let windowWidth= window.innerWidth;
+let paintEnabled=true;
 
 documentColors=["#004165", "#fbc834","#00535e","#00a0af"];
 
@@ -33,25 +33,25 @@ function limpiarCirculos(){
 }
 
 function paintCircles(e){
-    limpiarCirculos();
-    let idSelected=e.target.getAttribute("id");
-    if(!chkSuperpuesto.checked)
-    {
-        let circuloSelected= document.getElementById(idSelected);
-        circuloSelected.style.backgroundColor=options[options.selectedIndex].value;
-    }
-    else{
-        for (let index = 0; index < circles.length; index++) {
-            if(circles[index].getAttribute("id") ==idSelected)
+    if(paintEnabled){
+        limpiarCirculos();
+        let idSelected=e.target.getAttribute("id");
+        if(!chkSuperpuesto.checked)
             {
-                circles[index].style.backgroundColor=options[options.selectedIndex].value;
-                break;
+            let circuloSelected= document.getElementById(idSelected);
+            circuloSelected.style.backgroundColor=options[options.selectedIndex].value;
+            } else{
+                for (let index = 0; index < circles.length; index++) {
+                    if(circles[index].getAttribute("id") ==idSelected)
+                        {
+                            circles[index].style.backgroundColor=options[options.selectedIndex].value;
+                            break;
+                        } else
+                        {
+                        circles[index].style.backgroundColor=options[options.selectedIndex].value;            
+                        }           
+                }
             }
-            else
-            {
-                circles[index].style.backgroundColor=options[options.selectedIndex].value;            
-            }           
-        }
     }
 }
 
@@ -72,30 +72,38 @@ let colorSamples=document.getElementsByClassName("colorSamples");
 
 let buttonReset=document.getElementsByTagName("button");
 
+buttonReset[0].addEventListener("click", limpiarCirculos);
+
 function enableBtnReset(){
-    buttonReset[0].addEventListener("click", limpiarCirculos);
+    buttonReset[0].disabled=false;
 }
 
 function disableBtnReset(){
-    buttonReset[0].removeEventListener("click", limpiarCirculos);
+    buttonReset[0].disabled=true;
 }
+
 function disableButtons(){
-    if (windowWidth <= 500){
+    if (window.innerWidth <= 500){
+        paintEnabled=false;
         for (let index = 0; index < circles.length; index++) {
             circles[index].style.backgroundColor="#877f7d";     
         }
        options.disabled=true;
        chkSuperpuesto.disabled=true;
-       removeEventListenerCirculos();
        disableBtnReset();
     } else {
-        options.disabled=!options.disabled;
-        chkSuperpuesto.disabled=!chkSuperpuesto.disabled;
-        enableBtnReset();
-    }
+        if(paintEnabled==false)
+            {
+                paintEnabled=true;
+                for (let index = 0; index < circles.length; index++) {
+                        circles[index].style.backgroundColor="#FFFFFF";     
+                    }
+                options.disabled=false;
+                chkSuperpuesto.disabled=false;
+                enableBtnReset();
+            }
+        }
 }
 
 
-window.addEventListener("resize", disableButtons)
-
-disableButtons();
+window.addEventListener("resize", disableButtons);
